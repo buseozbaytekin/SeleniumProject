@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "AmazonSeleniumWebDriver" >
+    <parameter name ="browser" value ="Chrome" />
+    <test name="AmazonTest" >
+        <classes>
+            <class name ="testRunners.Runner" />
+        </classes>
+    </test>
+</suite>
