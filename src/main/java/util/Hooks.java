@@ -14,8 +14,8 @@ public class Hooks {
     @Before
     public void before(){
         String browser = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browser");
-        properties = ConfigReader.initialize_Properties();
-        driver = DriverFactory.initialize_Driver(browser);
+        properties = ConfigReader.initializeProperties();
+        driver = DriverFactory.initializeDriver(browser);
     }
 
     @After
@@ -25,6 +25,6 @@ public class Hooks {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.quit();
+        //driver.quit();
     }
 }

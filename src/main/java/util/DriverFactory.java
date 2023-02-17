@@ -13,7 +13,7 @@ public class DriverFactory {
     static WebDriver driver;
     static Properties properties;
 
-    public static WebDriver initialize_Driver(String browser) {
+    public static WebDriver initializeDriver(String browser) {
         properties = ConfigReader.getProperties();
         if(browser == null){
             WebDriverManager.chromedriver().setup();

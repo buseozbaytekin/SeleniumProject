@@ -8,7 +8,7 @@ import java.util.Properties;
 public class ConfigReader {
     private static Properties properties;
 
-    public static Properties initialize_Properties() {
+    public static Properties initializeProperties() {
         properties = new Properties();
 
         try {

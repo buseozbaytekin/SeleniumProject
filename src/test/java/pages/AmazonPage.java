@@ -8,8 +8,8 @@ import util.ElementHelper;
 import java.time.Duration;
 
 public class AmazonPage {
-    static WebDriver driver;
-    static ElementHelper elementHelper;
+    private WebDriver driver;
+    private ElementHelper elementHelper;
     WebDriverWait wait;
 
     static By accept = By.id("sp-cc-accept");
@@ -30,42 +30,42 @@ public class AmazonPage {
         this.elementHelper = new ElementHelper(driver);
     }
 
-    public static void homePage() {
+    public void homePage() {
         driver.get("https://www.amazon.com.tr");
     }
 
-    public static void acceptCookies() {
+    public void acceptCookies() {
         elementHelper.click(accept);
     }
 
-    public static void searchButton() {
+    public void searchButton() {
         elementHelper.click(search);
     }
 
-    public static void productName() {
+    public void productName() {
         elementHelper.sendKey(search,"airpods");
         elementHelper.click(searchButton);
     }
 
-    public static void filterShippedByAmazon() {
+    public void filterShippedByAmazon() {
         elementHelper.click(amazonRadioButton);
     }
 
-    public static void filterAppleBrand() {
+    public void filterAppleBrand() {
         elementHelper.click(appleRadioButton);
     }
 
-    public static void firstProduct() {
+    public void firstProduct() {
         elementHelper.click(firstProduct);
     }
 
-    public static void addToCart() {
+    public void addToCart() {
         elementHelper.click(addCartButton);
         elementHelper.click(closeCart);
         elementHelper.click(goToCart);
     }
 
-    public static void cartPage() {
+    public void cartPage() {
         elementHelper.checkVisible(checkCart);
     }
 
