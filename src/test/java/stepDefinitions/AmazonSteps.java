@@ -28,6 +28,7 @@ public class AmazonSteps {
     @When("Write product name")
     public void writeProductName() {
         amazonPage.productName();
+        amazonPage.clickSubmitButton();
     }
 
     @When("Click shipped by amazon radio button")
@@ -36,7 +37,7 @@ public class AmazonSteps {
     }
 
     @When("Click Apple radio button for filter")
-    public void clickAppleRadioButtonForFilter() {
+    public void clickAppleRadioButton() {
         amazonPage.filterAppleBrand();
     }
 

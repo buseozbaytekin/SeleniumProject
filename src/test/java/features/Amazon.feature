@@ -4,7 +4,6 @@ Feature: Amazon.com
     When Click accept cookies
     When Click search button
     When Write product name
-    When Click search button
     When Click shipped by amazon radio button
     When Click Apple radio button for filter
     When Click first product

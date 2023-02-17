@@ -25,6 +25,6 @@ public class Hooks {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        //driver.quit();
+        driver.quit();
     }
 }

@@ -13,12 +13,12 @@ public class AmazonPage {
     WebDriverWait wait;
 
     static By accept = By.id("sp-cc-accept");
-    static By search = By.id("twotabsearchtextbox");
+    static By searchTextBox = By.id("twotabsearchtextbox");
     static By searchButton = By.id("nav-search-submit-button");
-    static By amazonRadioButton = By.xpath("//span[@class='a-size-base a-color-base'][contains(text(),'Amazon Tarafından Gönderilir')]");
+    static By amazonRadioButton = By.id("p_n_fulfilled_by_amazon/21345978031");
     static By appleRadioButton = By.xpath("(//span[@class='a-size-base a-color-base'][normalize-space()='Apple'])[1]");
     static By firstProduct = By.xpath("//img[@alt='Apple AirPods (2.Nesil) ve Kablolu Şarj Kutusu']");
-    static By addCartButton = By.id("id=\"add-to-cart-button\"");
+    static By addCartButton = By.id("add-to-cart-button");
     static By closeCart = By.id("attach-close_sideSheet-link");
     static By goToCart = By.id("nav-cart-count-container");
     static By checkCart = By.cssSelector(".a-truncate-cut");
@@ -39,14 +39,15 @@ public class AmazonPage {
     }
 
     public void searchButton() {
-        elementHelper.click(search);
+        elementHelper.click(searchTextBox);
     }
 
     public void productName() {
-        elementHelper.sendKey(search,"airpods");
+        elementHelper.sendKey(searchTextBox,"airpods");
+    }
+    public void clickSubmitButton() {
         elementHelper.click(searchButton);
     }
-
     public void filterShippedByAmazon() {
         elementHelper.click(amazonRadioButton);
     }
@@ -71,5 +72,6 @@ public class AmazonPage {
 
     public void isAdded() {
     }
+
 
 }
